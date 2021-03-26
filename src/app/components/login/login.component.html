@@ -1,0 +1,52 @@
+<div class="login">
+  <form [formGroup]="form" (ngSubmit)="submitLogin()" novalidate>
+    <ion-item lines="none" class="avatar">
+      <ion-avatar>
+        <ion-img src="../../../assets/img/logo.jpg"></ion-img>
+      </ion-avatar>
+    </ion-item>
+
+    <ion-item lines="none">
+      <h1>Prueba técnica</h1>
+    </ion-item>
+
+    <div class="dataSection">
+      <ion-item class="input" lines="full">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        <ion-input
+          formControlName="mail"
+          name="mail"
+          type="email"
+          placeholder="Email"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item color="danger" *ngIf="showErrors(this.mail)">
+        El email introducido no es válido
+      </ion-item>
+
+      <ion-item class="input" lines="full">
+        <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+        <ion-input
+          formControlName="password"
+          name="password"
+          type="password"
+          placeholder="Contraseña"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item color="danger" *ngIf="showErrors(this.password)">
+        La contraseña debe tener más de 5 caracteres
+      </ion-item>
+
+      <ion-item class="input" lines="none">
+        <ion-label>Recordar</ion-label>
+        <ion-toggle formControlName="reminder" slot="end"></ion-toggle>
+      </ion-item>
+
+      <ion-item lines="none" class="sendButton">
+        <ion-button fill="outline" type="submit">Acceder</ion-button>
+      </ion-item>
+    </div>
+  </form>
+</div>

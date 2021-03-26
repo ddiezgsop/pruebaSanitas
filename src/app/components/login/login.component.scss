@@ -1,0 +1,113 @@
+:host {
+  width: 90%;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    align-items: center;
+
+    background: none;
+
+    @media (min-width: 960px) {
+      width: 400px;
+
+      background: white;
+    }
+  }
+
+  ion-item {
+    --background: none;
+
+    &[color="danger"] {
+      width: 90%;
+    }
+  }
+
+  ion-avatar {
+    --border-radius: 0;
+    width: 125px;
+    height: 125px;
+  }
+
+  .avatar {
+    padding-top: 40px;
+  }
+
+  .input {
+    width: 90%;
+  }
+
+  .dataSection {
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 960px) {
+      background: none;
+    }
+  }
+
+  h1 {
+    padding-bottom: 20px;
+    display: none;
+
+    @media (min-width: 960px) {
+      display: block;
+    }
+  }
+
+  .sendButton {
+    padding-top: 15px;
+    padding-bottom: 0;
+    width: 100%;
+    --padding-start: 0;
+    --inner-padding-end: 0;
+
+    @media (min-width: 960px) {
+      padding-bottom: 15px;
+    }
+  }
+
+  .input-error {
+    background-color: red;
+    align-self: flex-end;
+    margin-right: 5%;
+  }
+
+  ion-button {
+    width: 100%;
+    height: 100%;
+    --background: var(--ion-color-primary);
+    --border-color: none;
+    --color: white;
+    --border-radius: 0;
+    --border-width: 0;
+    text-transform: none;
+    font-size: 14px;
+    margin: 0;
+
+    @media (min-width: 960px) {
+      margin: 0 auto;
+
+      width: 125px;
+      height: 40px;
+      --background: white;
+      --border-color: var(--ion-color-primary);
+      --color: black;
+      --border-radius: 30px;
+      --border-width: 2px;
+      text-transform: none;
+      font-size: 14px;
+    }
+  }
+}
